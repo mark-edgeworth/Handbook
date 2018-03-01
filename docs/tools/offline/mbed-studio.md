@@ -4,23 +4,23 @@ Arm Mbed Studio is a local development environment for Mbed OS projects. This do
 
 ### Current status and downloads
 
-Mbed Studio is currently in closed alpha. You can [request access here](https://os.mbed.com/studio/) if you're happy to provide feedback. During this phase, some features are still in progress, and there are frequent updates to the product.
+Mbed Studio is currently in closed alpha. You can [request access here](https://os.mbed.com/studio/) if you're happy to provide feedback. During this phase, some features are still in progress, and there will be frequent updates to the product.
 
 ### Getting started
 
-This section shows the steps of creating, exploring, running and debugging an example project packaged with Mbed Studio. After reading it, you will have a better understanding of how you can use Mbed Studio to develop for Mbed OS. Start Mbed Studio, and follow the steps below.
+This section shows the steps of creating, exploring, running and debugging an example project packaged with Mbed Studio. After reading it, you will have a better understanding of how you can use Mbed Studio to develop for Mbed OS. Start Mbed Studio and follow the steps below.
 
 #### On startup
 
-When you launch Mbed Studio, you see a login screen (unless you're using an internal release), which requires you to sign in with your Mbed username and password. Sign in with your Mbed credentials. If you're an alpha user, you can continue through to the workspace.
+When you launch Mbed Studio, you see a login screen (unless you're using an internal release), which requires you to sign in with your Mbed username and password. Sign in with your Mbed credentials. If you're an authorised alpha user you can continue through to the workspace.
 
 #### Creating a new project based on an example
 
 When you arrive in your workspace, it's empty - clean, white and lacking in programs. It's time to start populating it.
 
-The first step is to create a project based on the included `mbed-os-example-blinky` example. You can do this using the Mbed Studio menu or using the context menu in the C++ Projects view of Mbed Studio.
+The first step is to create a project based on the included `mbed-os-example-blinky` example. You can do this using the Mbed Studio menu or using the context menu in the Mbed Projects view of Mbed Studio.
 
-To use the context menu, right-click (Ctrl-click) inside the Mbed Projects or C++ Projects view, and then select `New > Mbed OS Application`. To do the same through the menu, click `File > New > Mbed OS Application` to activate the New Project wizard.
+To use the context menu, right-click (Ctrl-click) inside the Mbed Projects view, and then select `New > Mbed OS Application`. To do the same through the menu, click `File > New > Mbed OS Application` to activate the New Project wizard.
 
 Now, create a new project through the activated New Project wizard. Select the `From Supplied Example` radio button, and then select the `mbed-os-example-blinky` example from the list of examples. Continue through the wizard by clicking the `Next` button.
 
@@ -28,13 +28,13 @@ Fill in the project name (you can be creative or just use the default example na
 
 Additionally, you can create a blank project with the `Empty Project` radio button. As a result, you can click `Finish` without continuing, which creates a blank project.
 
-Mbed Studio now begins to create the project in the workspace and shows its progress on the final screen of the wizard. Once complete, you can see the project in your workspace within the Mbed Projects view.
+Mbed Studio now begins to create the project in the workspace and shows its progress on the final screen of the wizard. Once complete, you can see the project in your workspace within the `Mbed Projects` view.
 
 #### Explore or edit the project
 
 Mbed Studio provides support for formatting, syntax highlighting, locating files, comparing files and navigating to lower level code, such as pin definitions for your target hardware. For a more general look at the features provided by Eclipse, consult the [Eclipse](http://help.eclipse.org/neon/index.jsp) online help documentation.
 
-Now, there is a project located in the `C++ Projects` with the name `mbed-os-example-blinky` (or whatever project name you provided earlier). Clicking the triangle next to the project expands its contents and reveals the project’s current files and directories.
+Now, there is a project located under the `Active Project` node in the `Mbed Projects` view with the name `mbed-os-example-blinky` (or whatever project name you provided earlier). Clicking the triangle next to the project expands its contents and reveals the project’s current files and directories.
 
 Double-click on the `main.cpp` file to open it in Mbed Studio’s editor area. This file includes the code needed to blink an LED. If you haven’t done so already, connect an [Mbed Enabled board](https://os.mbed.com/platforms/) to your machine. Mbed Studio detects the board and prompts you with a dialog asking to switch targets. Accept this, and you are ready to run the example.
 
@@ -46,17 +46,17 @@ This section covers the necessary steps of building and running the project, so 
 
 Before you can run the program, Mbed Studio needs to build a binary using a compiler. For the alpha version of Mbed Studio this compiler is GCC. There are multiple ways to start a build, but the easiest is to click the build icon.
 
-Alternatively, you can right-click (Ctrl-click) on the project in the `C++ Projects` view and then select `Build Project`. You can also use the menu by choosing `Project > Build Project`. Both begin to build a binary that you can deploy.
+Alternatively, you can right-click (Ctrl-click) on the project in the `Mbed Projects` view and then select `Build Project`. You can also use the menu by choosing `Project > Build Project`. Both begin to build a binary that you can deploy.
 
 Alternatively, you can choose to build the project automatically through the menu by choosing `Project > Build Automatically`. This tells Mbed Studio to build the projects in the workspace whenever needed. After the build, an `mbed-os-example-blinky.bin` (or `<project name>.bin`) file is ready to deploy.
 
 ##### Building within Mbed Studio
 
-Mbed Studio uses the tools built into Mbed OS to determine what builds and where the output of a build goes. The build tools build on request or (if the `Project > Build Automatically` option is checked) when you change and save a source file. The build operation only builds components that have changed and does nothing if nothing changed. Mbed Studio regards all projects in the workspace as part of the same system, so it initially builds all projects. Pressing the build button also ensures that all workspace projects build (if required).
+Mbed Studio uses the tools built into Mbed OS to determine what builds and where the output of a build goes. The build tools build on request or (if the `Project > Build Automatically` option is checked) when you change and save a source file. The build operation only builds components that have changed and does nothing if nothing changed. 
 
 The aim is to maintain a system that is always in a built state, providing rapid error feedback to developers as they make changes.
 
-Under some circumstances (in particularly large projects, or when the target device changes frequently), you may wish to turn off automatic builds and build individual projects on request. To do this, select Build from the project right-click menu.
+Under some circumstances (in particularly large projects, or when the target device changes frequently), you may wish to turn off automatic builds and build the active project on request. To do this, select Build from the project right-click menu.
 
 ##### Run
 
@@ -136,11 +136,11 @@ Mbed Studio automatically sets up the workspace. Use it to keep track of setting
 
 ##### Project
 
-A project is a group of associated files, directories and settings. The `C++ Projects` view lists these projects. In Mbed Studio, each project represents an Mbed OS program or an Mbed OS library. An Mbed Studio project can also represent a program that includes libraries, as well.
+A project is a group of associated files, directories and settings. The `Mbed Projects` view lists these projects. In Mbed Studio, each project represents an Mbed OS program or an Mbed OS library. An Mbed Studio project can also represent a program that includes libraries, as well.
 
 ##### View
 
-In Mbed Studio, a view is a window that has a label, and sometimes options, specific to that window. Examples are the editor, C++ Projects, Console and Outline.
+In Mbed Studio, a view is a window that has a label, and sometimes options, specific to that window. Examples are the editor, `Mbed Projects`, `Console` and `Outline`.
 
 ##### Perspective
 
@@ -165,9 +165,6 @@ Workaround: None
 
 #### Mac
 
-The `Eclipse.app` distributed for Mac is not yet signed. Mac OS X may show errors about unknown developers when you double-click to launch.
-Workaround: To launch, Ctrl-click on `Eclipse.app`, and choose `Open`. Then, approve the open action on subsequent warning dialogs.
-
 When CDT (C/C++ Developer Tooling) performs a build, it tries to use the system GCC. If it is not present, Mac OS X prompts to install the Xcode command-line tools.
 Workaround: None. Follow the prompts to install the command-line tools, and restart Mbed Studio.
 
@@ -185,18 +182,5 @@ Workaround: This error does not prevent the product from successfully updating.
 
 This section includes common questions and answers.
 
-Q: How can I tell if I already have a working Java install?
-A: From the command-line, run: `java -version`. You have a working Java install if you see something similar to the following:
-
-`java version "1.8.0_141"`
-`Java(TM) SE Runtime Environment (build 1.8.0_141-b15)`
-`Java HotSpot(TM) 64-Bit Server VM (build 25.141-b15, mixed mode)`
-
-If not, follow the instructions earlier in this document to install Java.
-
-Q: I have Java installed. Why won’t Mbed Studio launch?
-A: Mbed Studio is a 64-bit only application, which requires not only a 64-bit OS, but also a 64-bit Java JDK/JRE installed on the OS.
-The 64-bit JDK/JRE needs to be the system default, or you may have to manually configure internal Mbed Studio initialization files to use the 64-bit JDK/JRE.
-
-Q: Will Mbed Studio work with Java 9?
-A: Currently, Mbed Studio does not work with Java 9, but later versions will.
+Q: Do I need to install Java, or a compiler?
+A: No, Mbed Studio bundles its own Java Runtime Environment and other tools required for its operation.
